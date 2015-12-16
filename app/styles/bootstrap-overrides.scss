@@ -1,0 +1,41 @@
+@import 'variables.scss';
+
+.modal-header {
+  padding: 0 15px;
+  border: 0;
+  color: $link;
+
+  h3 {
+    margin-bottom: 0;
+  }
+  .close {
+    margin-top: 8px;
+  }
+}
+.modal-footer {
+  padding: 0 15px 15px;
+  border-top: none;
+}
+
+.btn {
+  min-width: 100px;
+  border-radius: 0;
+  background-color: #dedede;
+  color: $text-color;
+  border: 0;
+
+  &.btn-success {
+    background-color: $success;
+    color: #fff;
+  }
+
+  &.btn-primary {
+    background-color: $link;
+    color: #fff;
+  }
+}
+
+input[type=search]:focus{
+  border: 1px solid $link;
+  outline: none;
+}

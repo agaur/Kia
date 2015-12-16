@@ -1,0 +1,90 @@
+@import '../variables.scss';
+
+@mixin user-select-none {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;
+}
+
+.sumoSelect-container {
+  position: relative;
+  border: 1px solid $border-color;
+  border-radius: 0;
+  cursor: pointer;
+  box-shadow: none;
+  @include user-select-none();
+
+  &.empty {
+    background-color: $border-color;
+    .sumoSelect-clear {
+      display: none;
+    }
+    .sumoSelect-arrow {
+      display: block;
+    }
+  }
+}
+
+.sumoSelect-clear {
+  color: $placeholder-color;
+  position: absolute;
+  right: 10px;
+
+  &:hover {
+    color: $text-color;
+  }
+}
+
+.sumoSelect-arrow {
+  display: none;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+
+.ss-dropdown {
+  background-color: white;
+  border: 1px solid $border-color;
+  color: $text-color;
+  left: -1px;
+  position: absolute;
+  right: -1px;
+  top: 32px;
+  z-index: 100;
+
+}
+.ss-search {
+  padding: 4px;
+  display: block;
+}
+.ss-search-field {
+  border: 1px solid $border-color;
+  padding: 4px;
+  width: 100%;
+}
+
+.ss-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &:hover {
+    .ss-result-option.selected {
+      background: $border-color;
+      color: #555555;
+    }
+  }
+  .ss-result-option {
+    display: block;
+    padding: 5px 10px;
+
+
+    &.selected:hover,&.selected,&:hover {
+      background: $link;
+      color: white;
+    }
+  }
+
+}

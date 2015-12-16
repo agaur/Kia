@@ -1,0 +1,5 @@
+<%_.forEach(items, function(item){
+%>
+    <li class="ss-result-option <%=selected === item.id ? 'selected': ''%>" data-id="<%=item.id%>"><%=item.label%></li>
+<%
+})%>
